@@ -6,6 +6,7 @@ function Contact() {
   const [state, handleSubmit] = useForm('xqkrovjw');
 
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     await handleSubmit(event);
 
     if (state.succeeded) {
