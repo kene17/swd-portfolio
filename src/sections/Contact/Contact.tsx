@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import styles from './ContactStyles.module.css';
-import { FormEvent } from 'react';
+import { FormEvent, useEffect } from 'react';
 
 function Contact() {
   const [state, handleSubmit] = useForm('xqkrovjw');
@@ -8,11 +8,13 @@ function Contact() {
   const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     await handleSubmit(event);
+  };
 
+  useEffect(() => {
     if (state.succeeded) {
       window.alert('Thanks for your message!');
     }
-  };
+  }, [state.succeeded]);
 
   return (
     <section
