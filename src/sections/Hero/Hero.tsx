@@ -52,7 +52,7 @@ const Hero = () => {
             />
           </a>
           <a
-            href='https://github.com/'
+            href='https://github.com/kene17'
             target='_blank'
           >
             <img
@@ -61,7 +61,7 @@ const Hero = () => {
             />
           </a>
           <a
-            href='https://linkedin.com/'
+            href='https://www.linkedin.com/in/keneojukwu'
             target='_blank'
           >
             <img
@@ -71,8 +71,8 @@ const Hero = () => {
           </a>
         </span>
         <p className={styles.description}>
-          With a passion for developing modern React web apps for commercial
-          businesses.
+          With a passion for developing modern Full-Stack web apps for
+          commercial businesses.
         </p>
         <a
           href={CV}
