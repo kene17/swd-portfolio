@@ -1,13 +1,25 @@
+import { useForm, ValidationError } from '@formspree/react';
 import styles from './ContactStyles.module.css';
+import { FormEvent } from 'react';
 
-const Contact = () => {
+function Contact() {
+  const [state, handleSubmit] = useForm('xqkrovjw');
+
+  const handleFormSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    await handleSubmit(event);
+
+    if (state.succeeded) {
+      window.alert('Thanks for your message!');
+    }
+  };
+
   return (
     <section
       id='contact'
       className={styles.container}
     >
       <h1 className='sectionTitle'>Contact</h1>
-      <form action=''>
+      <form onSubmit={handleFormSubmit}>
         <div className='formGroup'>
           <label
             htmlFor='name'
@@ -31,11 +43,16 @@ const Contact = () => {
             Email
           </label>
           <input
-            type='text'
+            type='email'
             name='email'
             id='email'
             placeholder='Email'
             required
+          />
+          <ValidationError
+            prefix='Email'
+            field='email'
+            errors={state.errors}
           />
         </div>
         <div className='formGroup'>
@@ -51,15 +68,21 @@ const Contact = () => {
             placeholder='Message'
             required
           ></textarea>
+          <ValidationError
+            prefix='Message'
+            field='message'
+            errors={state.errors}
+          />
         </div>
         <input
           className='hover btn'
           type='submit'
           value='Submit'
+          disabled={state.submitting}
         />
       </form>
     </section>
   );
-};
+}
 
 export default Contact;
