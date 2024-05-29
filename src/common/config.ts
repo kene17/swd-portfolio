@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     src: githubApp,
-    link: 'https://githubs-api-test.netlify.app/search/user',
+    link: 'https://githubs-api-test.netlify.app/',
     h3: 'Github App',
     p: 'Github Search App',
   },
