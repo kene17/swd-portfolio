@@ -1,7 +1,7 @@
-import viberr from '../../assets/viberr.png';
-import freshBurger from '../../assets/fresh-burger.png';
-import hipsster from '../../assets/hipsster.png';
-import fitLift from '../../assets/fitlift.png';
+import viberr from '../assets/viberr.png';
+import freshBurger from '../assets/fresh-burger.png';
+import hipsster from '../assets/hipsster.png';
+import fitLift from '../assets/fitlift.png';
 
 export type ThemeContextType = {
   theme: string;
@@ -14,6 +14,17 @@ export type ProjectCardProps = {
   h3: string;
   p: string;
 };
+
+export type SkillListProps = {
+  src: string;
+  skill: string;
+};
+
+export const skills = [
+  ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Node'],
+  ['React', 'Angular', 'Vue', 'Tailwind CSS'],
+  ['Redux', 'Webpack', 'Git', 'Jest', 'Bootstrap'],
+];
 
 export const projects = [
   {
