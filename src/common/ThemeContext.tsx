@@ -5,11 +5,7 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-
-export type ThemeContextType = {
-  theme: string;
-  toggleTheme: () => void;
-};
+import { ThemeContextType } from './config';
 
 type ThemeProviderProps = {
   children: ReactNode;
