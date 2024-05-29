@@ -24,7 +24,7 @@ export const useTheme = () => {
 export const ThemeContextProvider = ({ children }: ThemeProviderProps) => {
   //checks if we've a theme already else set it to light
   const [theme, setTheme] = useState(
-    () => localStorage.getItem('theme') || 'dark'
+    () => localStorage.getItem('theme') || 'light'
   );
 
   useEffect(() => {

@@ -43,15 +43,6 @@ const Hero = () => {
         <h2>Full Stack Developer</h2>
         <span>
           <a
-            href='https://twitter.com/'
-            target='_blank'
-          >
-            <img
-              src={twitterIcon}
-              alt='Twitter icon'
-            />
-          </a>
-          <a
             href='https://github.com/kene17'
             target='_blank'
           >
@@ -67,6 +58,15 @@ const Hero = () => {
             <img
               src={linkedinIcon}
               alt='Linkedin icon'
+            />
+          </a>
+          <a
+            href='https://twitter.com/'
+            target='_blank'
+          >
+            <img
+              src={twitterIcon}
+              alt='Twitter icon'
             />
           </a>
         </span>
