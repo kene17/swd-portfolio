@@ -2,6 +2,7 @@ import viberr from '../assets/viberr.png';
 import spacestagram from '../assets/spacestagram.png';
 import githubApp from '../assets/githubApp.png';
 import ecommerce from '../assets/e-commerce.png';
+import audioApp from '../assets/audio-app.png';
 
 export type ThemeContextType = {
   theme: string;
@@ -32,6 +33,12 @@ export const projects = [
     link: 'https://mern-booking-app-fe6u.onrender.com/',
     h3: 'Mern Booking App',
     p: 'Booking Platform for Hotels',
+  },
+  {
+    src: audioApp,
+    link: 'https://staccato-audio.netlify.app/',
+    h3: 'Staccato App',
+    p: 'Audio Listening Platform for Staccato',
   },
   {
     src: spacestagram,
